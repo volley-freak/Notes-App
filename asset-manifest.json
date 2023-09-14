@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/volley-freak/Notes-App.git/static/css/main.f0c4ac9e.css",
+    "main.js": "/volley-freak/Notes-App.git/static/js/main.39df4a56.js",
+    "index.html": "/volley-freak/Notes-App.git/index.html",
+    "static/media/add.svg": "/volley-freak/Notes-App.git/static/media/add.ebf598626c6f9b2211b0578a435aaa6b.svg",
+    "static/media/arrow-left.svg": "/volley-freak/Notes-App.git/static/media/arrow-left.b553318e4fdaed1113efb091889b7f47.svg",
+    "main.f0c4ac9e.css.map": "/volley-freak/Notes-App.git/static/css/main.f0c4ac9e.css.map",
+    "main.39df4a56.js.map": "/volley-freak/Notes-App.git/static/js/main.39df4a56.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f0c4ac9e.css",
+    "static/js/main.39df4a56.js"
+  ]
+}
