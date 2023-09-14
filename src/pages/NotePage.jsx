@@ -12,11 +12,12 @@ const NotePage = () => {
         getNote()
     }, [id])
 
+    const apiUrl = 'https://hritik7465.pythonanywhere.com'
     const getNote = async () => {
         if (id === 'new'){
             return
         }
-        let response = await fetch(`/notes/${id}/`)
+        let response = await fetch(`${apiUrl}/notes/${id}/`)
         let data = await response.json()
         // console.log(data)
         setNote(data)
@@ -24,7 +25,7 @@ const NotePage = () => {
     // console.log(note);
 
     let createNote = async () => {
-        fetch('/notes/', {
+        fetch(`${apiUrl}/notes/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +35,7 @@ const NotePage = () => {
     }
 
     let updateNote = async () => {
-        fetch(`/notes/${id}/`, {
+        fetch(`${apiUrl}/notes/${id}/`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -44,7 +45,7 @@ const NotePage = () => {
     }
 
     let deleteNote = async () => {
-        fetch(`/notes/${id}/`, {
+        fetch(`${apiUrl}/notes/${id}/`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

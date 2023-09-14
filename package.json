@@ -1,7 +1,6 @@
 {
   "homepage": "https://volley-freak.github.io/Notes-App",
   "name": "frontend",
-  "proxy": "https://hritik7465.pythonanywhere.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

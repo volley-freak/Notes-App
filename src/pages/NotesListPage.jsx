@@ -12,8 +12,10 @@ const NotesListPage = () => {
 
     }, [])
 
+    const apiUrl = 'https://hritik7465.pythonanywhere.com'
+
     let getNotes = async () => {
-        let response = await fetch('/notes/')
+        let response = await fetch(`${apiUrl}/notes/`)
         let data = await response.json()
         // console.log(data)
         setNotes(data)
