@@ -7,7 +7,7 @@ const NotesListPage = () => {
     let [notes, setNotes] = useState([])
 
     useEffect(() => {
-
+        console.log('change')
         getNotes();
 
     }, [])

@@ -9,6 +9,7 @@ const NotePage = () => {
     let navigate = useNavigate();
 
     useEffect(() => {
+        console.log('hello get note');
         getNote()
     }, [id])
 
@@ -25,27 +26,29 @@ const NotePage = () => {
     // console.log(note);
 
     let createNote = async () => {
-        fetch(`${apiUrl}/notes/`, {
+        await fetch(`${apiUrl}/notes/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(note)
         })
+        navigate('/')
     }
 
     let updateNote = async () => {
-        fetch(`${apiUrl}/notes/${id}/`, {
+        await fetch(`${apiUrl}/notes/${id}/`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(note)
         })
+        navigate('/')
     }
 
     let deleteNote = async () => {
-        fetch(`${apiUrl}/notes/${id}/`, {
+        await fetch(`${apiUrl}/notes/${id}/`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -67,7 +70,7 @@ const NotePage = () => {
         } else if (id === 'new' && note && note.body !== '') {
             createNote()
         }
-        navigate('/')
+        // window.location.reload();
     }
 
 
